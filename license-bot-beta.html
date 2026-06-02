@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בטא טסטינג - מוקד רישיונות</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Arial Hebrew', Arial, sans-serif;
+            background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        .header .subtitle {
+            color: #666;
+            font-size: 18px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            color: #003366;
+            margin-bottom: 15px;
+            font-size: 22px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .test-cases {
+            background: #f5f9ff;
+            border-right: 4px solid #0066cc;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .test-cases code {
+            background: #003366;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            display: inline-block;
+            margin: 3px;
+        }
+        .arrow {
+            color: #0066cc;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        ul {
+            padding-right: 25px;
+            margin: 10px 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .footer-note {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        .highlight {
+            background: #ffd700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 בטא טסטינג</h1>
+            <div class="subtitle">מוקד רישיונות - Agent דיגיטלי</div>
+        </div>
+
+        <div class="card">
+            <h2>👋 ברוכים הבאים לבטא!</h2>
+            <p>
+                האתר הזה הוקם לצורך <strong>בדיקת ה-Agent הדיגיטלי</strong> של מוקד הרישיונות.
+                ה-Agent מספק מידע על סטטוס משלוח של רישיון נהיגה, רישיון משיט, ותג חניה לנכה.
+            </p>
+            <p style="margin-top: 15px;">
+                <span class="highlight">לחצו על אייקון הצ'אט בפינה התחתונה</span> כדי להתחיל שיחה.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🧪 תרחישי בדיקה מומלצים</h2>
+            
+            <p><strong>תרחיש 1:</strong> בדיקת רישיון שלא קיים במערכת</p>
+            <div class="test-cases">
+                <span class="arrow">←</span> כתבו: <code>שלום, אני רוצה לבדוק סטטוס של רישיון נהיגה</code><br>
+                <span class="arrow">←</span> כשנשאלים: <code>123456789</code><br>
+                <strong>תוצאה צפויה:</strong> הודעה ש"לא נמצאו נתונים..."
+            </div>
+
+            <p><strong>תרחיש 2:</strong> בדיקת רישיון קיים (אם יצרת)</p>
+            <div class="test-cases">
+                <span class="arrow">←</span> כתבו: <code>מה הסטטוס של הרישיון שלי?</code><br>
+                <span class="arrow">←</span> ת.ז.: <code>200000001</code> (או ת.ז. שיצרתם ל-Test Opportunity)<br>
+                <strong>תוצאה צפויה:</strong> הודעה לפי סטטוס ההזמנה
+            </div>
+
+            <p><strong>תרחיש 3:</strong> בקשת הפקת רישיון דחוף</p>
+            <div class="test-cases">
+                <span class="arrow">←</span> כתבו: <code>אני צריך להפיק רישיון נהיגה דחוף</code><br>
+                <strong>תוצאה צפויה:</strong> הסבר עם קישור לאתר משרד התחבורה
+            </div>
+
+            <p><strong>תרחיש 4:</strong> ניסוח חופשי - בדיקת הבנה</p>
+            <div class="test-cases">
+                <span class="arrow">←</span> נסו שאלות בסגנון שלכם, כגון:<br>
+                <code>איפה הרישיון שלי?</code>, <code>למה לא קיבלתי את הרישיון?</code>, <code>אני רוצה לדבר עם נציג</code>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📝 מה לבדוק ולדווח עליו</h2>
+            <ul>
+                <li>✅ <strong>הבנת השאלה</strong> - האם ה-Agent הבין מה שאלתם?</li>
+                <li>✅ <strong>נכונות התשובה</strong> - האם המידע מדויק?</li>
+                <li>✅ <strong>שפה</strong> - האם העברית טבעית וזורמת?</li>
+                <li>✅ <strong>פורמט</strong> - האם התשובות מסודרות וקריאות?</li>
+                <li>✅ <strong>מהירות</strong> - האם זמן התגובה סביר?</li>
+                <li>⚠️ <strong>תקלות</strong> - שגיאות, הודעות שלא הגיוניות, התנהגות מוזרה</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>📩 איך לדווח על ממצאים</h2>
+            <p>
+                שלחו פידבק ל-<strong>Michal Hollander</strong> במייל / Slack עם:
+            </p>
+            <ul style="margin-top: 10px;">
+                <li>📷 צילום מסך של השיחה</li>
+                <li>📝 תיאור מה ציפיתם לקבל</li>
+                <li>🤔 מה לדעתכם צריך לשפר</li>
+            </ul>
+        </div>
+
+        <div class="footer-note">
+            גרסת בטא • לבדיקות פנימיות בלבד • לא מיועד לקהל הרחב
+        </div>
+    </div>
+
+    <!-- Salesforce Embedded Messaging Widget -->
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'he';
+                embeddedservice_bootstrap.init(
+                    '00D9k000001cnNJ',
+                    'License_Bot_Web_Channel',
+                    'https://fastdl.my.site.com/ESWLicenseBotWebChanne1780226313874',
+                    {
+                        scrt2URL: 'https://fastdl.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://fastdl.my.site.com/ESWLicenseBotWebChanne1780226313874/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
